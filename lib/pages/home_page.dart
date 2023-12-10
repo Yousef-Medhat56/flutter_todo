@@ -23,9 +23,15 @@ class HomePage extends StatelessWidget {
             child: ListView.builder(
                 itemCount: todoListItems.length,
                 itemBuilder: (context, index) {
-                  return TodoTile(
-                    todoItem: todoListItems[index],
-                    onChanged: (bool) => todoList.toggleTodoIsCompleted(index),
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 24),
+                    child: TodoTile(
+                      todoItem: todoListItems[index],
+                      // ignore: avoid_types_as_parameter_names
+                      onChanged: (bool) =>
+                          todoList.toggleTodoIsCompleted(index),
+                      deleteItem: (context) => todoList.deleteItem(index),
+                    ),
                   );
                 })),
         floatingActionButton: const FloatingActionBtn());
