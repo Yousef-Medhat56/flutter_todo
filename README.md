@@ -1,16 +1,9 @@
-# to_do_app
+# Flutter To-do app
 
-A new Flutter project.
+A todo list app using Flutter.<br>
+Thanks to this [tutorial](https://www.youtube.com/watch?v=mMgr47QBZWA) by **Mitch Koko**.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## What I learnt?
+1. Using TextField widget to get the input from the user.
+2. Using the slidable widget.
+3. The basics of using hive for storing data. 
