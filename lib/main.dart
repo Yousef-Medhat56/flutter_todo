@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:hive_flutter/adapters.dart';
 import 'package:provider/provider.dart';
-import 'package:to_do_app/models/todo_list.model.dart';
+import 'package:to_do_app/models/todo.dart';
+import 'package:to_do_app/models/todo_list.dart';
 import 'package:to_do_app/pages/home_page.dart';
 
-void main() {
+void main() async {
+  //init hive
+  await Hive.initFlutter();
+  Hive.registerAdapter(TodoAdapter());
+  //open a box
+  await Hive.openBox("todoBox");
+
   runApp(ChangeNotifierProvider(
     create: (context) => TodoList(),
     child: const MyApp(),
@@ -18,7 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'To Do',
       theme: ThemeData(
         colorScheme: ColorScheme.light(
           background: Colors.yellow.shade200,
