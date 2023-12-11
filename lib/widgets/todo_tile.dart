@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
-import 'package:to_do_app/models/todo.model.dart';
+import 'package:to_do_app/models/todo.dart';
 
 class TodoTile extends StatelessWidget {
   final Todo todoItem;
